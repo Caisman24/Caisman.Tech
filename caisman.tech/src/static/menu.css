@@ -1,0 +1,33 @@
+.menu-center{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.menu-list{
+    list-style-type: none;
+    overflow: hidden;
+    font-family: proxima-nova;
+    font-size: 11.5px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    justify-content: center;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.menu-center li{
+    padding-right: 10px;
+    display:inline;
+}
+
+.menu-center li:last-child{
+    padding-right: 0;
+    float:right;
+}
+
+.menu-center a{
+    text-decoration: none;
+    color:black;
+}
