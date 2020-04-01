@@ -4,7 +4,7 @@ import '../../static/footer.css';
 class Footer extends Component {
   render() {
     return (
-      <div class="footer">
+      <div className="footer">
         <p>
           &copy;{new Date().getFullYear()} Caisman Tech - All Right Reserved
         </p>
