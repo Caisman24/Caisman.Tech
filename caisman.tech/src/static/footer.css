@@ -1,11 +1,51 @@
 .footer {
-  position: absolute;
-  text-align: center;
+  position: fixed;
   background-color: #1a1a1a;
-  color: white;
   bottom: 0;
   width: 100%;
-  height: 2.5rem;
   left: 0;
   right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 30%;
+}
+
+h1 {
+  color: #7a7d7f;
+  text-align: center;
+  font-size: 19px!important;
+  font-family: proxima-nova;
+}
+
+.social-icon ul{
+  display:flex;
+  justify-content: center;
+  margin-top: 35px;
+  margin-bottom: -35px;
+}
+
+.social-icon li {
+  list-style-type: none;
+  align-items: center;
+  width:100%;
+}
+
+.social-icon a {
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  position: relative;
+  margin: 0 4px;
+  background-color: #fff;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+a i{
+  top:0;
+  left:0;
+  line-height: 28px;
+  font-size: 15px;
+  color: #151616;
 }
