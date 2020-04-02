@@ -17,6 +17,10 @@ h1 {
   font-family: proxima-nova;
 }
 
+.social-icon {
+  text-align: center;
+}
+
 .social-icon a {
   border-radius: 50%;
   height: 28px;
