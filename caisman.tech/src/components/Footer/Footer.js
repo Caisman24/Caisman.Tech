@@ -21,39 +21,28 @@ class Footer extends Component {
                   Reserved
                 </h1>
                 <div className="social-icon">
-                  <ul>
-                    <li>
-                      <a href="https://www.instagram.com/caisman_24">
-                        <i>
-                          <FontAwesomeIcon icon={faInstagram} />
-                        </i>
-                      </a>
-                    </li>
+                  <a href="https://www.instagram.com/caisman_24">
+                    <i>
+                      <FontAwesomeIcon icon={faInstagram} />
+                    </i>
+                  </a>
+                  <a href="https://www.facebook.com/caius.suciu">
+                    <i>
+                      <FontAwesomeIcon icon={faFacebookF} />
+                    </i>
+                  </a>
 
-                    <li>
-                      <a href="https://www.facebook.com/caius.suciu">
-                        <i>
-                          <FontAwesomeIcon icon={faFacebookF} />
-                        </i>
-                      </a>
-                    </li>
+                  <a href="https://www.linkedin.com/in/caius-alexandru-suciu">
+                    <i>
+                      <FontAwesomeIcon icon={faLinkedinIn} />
+                    </i>
+                  </a>
 
-                    <li>
-                      <a href="https://www.linkedin.com/in/caius-alexandru-suciu">
-                        <i>
-                          <FontAwesomeIcon icon={faLinkedinIn} />
-                        </i>
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="https://github.com/Caisman24">
-                        <i>
-                          <FontAwesomeIcon icon={faGithub} />
-                        </i>
-                      </a>
-                    </li>
-                  </ul>
+                  <a href="https://github.com/Caisman24">
+                    <i>
+                      <FontAwesomeIcon icon={faGithub} />
+                    </i>
+                  </a>
                 </div>
               </div>
             </div>

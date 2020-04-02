@@ -17,18 +17,6 @@ h1 {
   font-family: proxima-nova;
 }
 
-.social-icon ul{
-  display:flex;
-  justify-content: center;
-  margin-top: 35px;
-  margin-bottom: -35px;
-}
-
-.social-icon li {
-  list-style-type: none;
-  align-items: center;
-}
-
 .social-icon a {
   border-radius: 50%;
   height: 28px;
