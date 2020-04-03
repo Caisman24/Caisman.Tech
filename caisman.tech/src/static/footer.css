@@ -56,16 +56,17 @@ a i{
   text-align: center; 
 }
 
-.footer-block-text a{
+.footer-block-text a, .footer-block-text a:hover, .footer-block-text a:active{
+  margin-right: 8px;
   color: #e1a87a;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   background-color: transparent;
+  text-decoration: none;
 }
 
-.footer-block-text a:hover, a:active{
-  color: rgba(225,168,122,.6);
-  border-color: rgba(225,168,122,.15)
+.footer-block-text a:last-child{
+  margin-right: none;
 }
 
 .footer-block-text p {

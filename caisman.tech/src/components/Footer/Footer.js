@@ -28,9 +28,7 @@ class Footer extends Component {
                   </p>
                   <p>
                     <a href="">Terms of Service</a>
-                    <span>&#160;&#160; &#160;&#160;</span>
                     <a href="">Return Policy</a>
-                    <span>&#160;&#160; &#160;&#160;</span>
                     <a href="">Privacy Policy</a>
                   </p>
                 </div>
