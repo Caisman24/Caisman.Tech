@@ -15,11 +15,25 @@ class Footer extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-12 py-5">
-              <div className="mb-5 flex-center">
-                <h1>
-                  &copy; {new Date().getFullYear()} Caisman Tech - All Right
-                  Reserved
-                </h1>
+              <div className="footerBlockBottom">
+                <div className="footer-title">
+                  <h1>
+                    The journey of a programmer trying to figure things out
+                  </h1>
+                </div>
+                <div className="footer-block-text">
+                  <p>
+                    &copy; {new Date().getFullYear()} Caisman Tech - All Right
+                    Reserved
+                  </p>
+                  <p>
+                    <a href="">Terms of Service</a>
+                    <span>&#160;&#160; &#160;&#160;</span>
+                    <a href="">Return Policy</a>
+                    <span>&#160;&#160; &#160;&#160;</span>
+                    <a href="">Privacy Policy</a>
+                  </p>
+                </div>
                 <div className="social-icon">
                   <a href="https://www.instagram.com/caisman_24">
                     <i>
