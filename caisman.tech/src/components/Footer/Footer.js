@@ -7,6 +7,7 @@ import {
   faInstagram,
   faGithub
 } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 class Footer extends Component {
   render() {
@@ -14,7 +15,7 @@ class Footer extends Component {
       <div className="footer">
         <div className="container">
           <div className="row">
-            <div className="col-md-12 py-5">
+            <div className="col-lg-12 col-md-8 py-5">
               <div className="footerBlockBottom">
                 <div className="footer-title">
                   <h1>
@@ -53,6 +54,12 @@ class Footer extends Component {
                   <a href="https://github.com/Caisman24">
                     <i>
                       <FontAwesomeIcon icon={faGithub} />
+                    </i>
+                  </a>
+
+                  <a href="mailto:caiussuciu@gmail.com">
+                    <i>
+                      <FontAwesomeIcon icon={faEnvelope} />
                     </i>
                   </a>
                 </div>
