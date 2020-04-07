@@ -13,7 +13,9 @@ class Menu extends Component {
     this.state = {
       isMobile: false,
     };
-    this.updatePredicate = this.updatePredicate.bind(this);
+    this.updatePredicate = () => {
+      this.setState({ isMobile: window.innerWidth < 768 });
+    };
   }
 
   componentDidMount() {
@@ -25,52 +27,46 @@ class Menu extends Component {
     window.removeEventListener('resize', this.updatePredicate);
   }
 
-  updatePredicate() {
-    this.setState({ isMobile: window.innerWidth < 768 });
-  }
-
   render() {
     const isMobile = this.state.isMobile;
     return (
-      <div>
-        {isMobile ? (
-          <div>Heloo there</div>
-        ) : (
-          <Router>
-            <div>
-              <nav>
-                <div className="menu-center">
-                  <ul className="menu-list">
-                    <li>
-                      <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                      <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                      <Link to="/resume">Resume</Link>
-                    </li>
-                    <li>
-                      <Link to="/subscribe">Subscribe</Link>
-                    </li>
-                    <li>
-                      <Link to="/contact">Contact</Link>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-
-              <Switch>
-                <Route path="/about" component={About}></Route>
-                <Route path="/resume" component={Resume}></Route>
-                <Route path="/subscribe" component={Subscribe}></Route>
-                <Route path="/contact" component={Contact}></Route>
-                <Route path="/" component={Home}></Route>
-              </Switch>
+      <Router>
+        <div>
+          <nav>
+            <div className="menu-center">
+              {isMobile ? (
+                <div>Heloo there</div>
+              ) : (
+                <ul className="menu-list">
+                  <li>
+                    <Link to="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/about">About</Link>
+                  </li>
+                  <li>
+                    <Link to="/resume">Resume</Link>
+                  </li>
+                  <li>
+                    <Link to="/subscribe">Subscribe</Link>
+                  </li>
+                  <li>
+                    <Link to="/contact">Contact</Link>
+                  </li>
+                </ul>
+              )}
             </div>
-          </Router>
-        )}
-      </div>
+          </nav>
+
+          <Switch>
+            <Route path="/about" component={About}></Route>
+            <Route path="/resume" component={Resume}></Route>
+            <Route path="/subscribe" component={Subscribe}></Route>
+            <Route path="/contact" component={Contact}></Route>
+            <Route path="/" component={Home}></Route>
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
