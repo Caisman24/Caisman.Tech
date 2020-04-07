@@ -5,7 +5,7 @@ import {
   faFacebookF,
   faLinkedinIn,
   faInstagram,
-  faGithub
+  faGithub,
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
@@ -14,7 +14,7 @@ class Footer extends Component {
     return (
       <div className="footer">
         <div className="container">
-          <div className="row">
+          <div className="row justify-content-center">
             <div className="col-lg-12 col-md-8 py-5">
               <div className="footerBlockBottom">
                 <div className="footer-title">
