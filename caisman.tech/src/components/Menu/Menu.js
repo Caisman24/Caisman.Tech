@@ -6,20 +6,20 @@ import About from '../About/About';
 import Resume from '../Resume/Resume';
 import Subscribe from '../Subscribe/Subscribe';
 import Contact from '../Contact/Contact';
+import MobileNav from './MobileNav';
 
 class Menu extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isMobile: false,
+      isMobileMenuVisible: false,
     };
 
     this.updatePredicate = () => {
       this.setState({ isMobile: window.innerWidth < 768 });
     };
   }
-
-  openMenu = () => {};
 
   componentDidMount() {
     this.updatePredicate();
@@ -30,8 +30,24 @@ class Menu extends Component {
     window.removeEventListener('resize', this.updatePredicate);
   }
 
+  openMenu = () => {
+    this.setState({isMobileMenuVisible: true})
+    this.props.hideFooter();
+  };
+
+  closeMenu = () => {
+    this.setState({isMobileMenuVisible: false})
+    this.props.showFooter();
+  }
+
   render() {
     const isMobile = this.state.isMobile;
+    if(this.state.isMobileMenuVisible)
+    {
+      return (
+        <MobileNav closeMenu={this.closeMenu}></MobileNav>
+      )
+    }
     return (
       <div className="header-menu">
         <Router>
@@ -43,7 +59,6 @@ class Menu extends Component {
                     <ul className="mobile-header">
                       <Link to="/">
                         <img
-                          onClick={this.openMenu}
                           className="first-img"
                           src={require('../../static/icon.svg')}
                           alt=""
@@ -51,6 +66,7 @@ class Menu extends Component {
                       </Link>
 
                       <img
+                        onClick={this.openMenu}
                         className="rightImage"
                         src={require('../../static/bars.svg')}
                         alt=""
