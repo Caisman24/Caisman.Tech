@@ -6,23 +6,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends Component {
   state = {
     isFooterVisible: true,
-  }
+  };
 
   showFooter = () => {
-    this.setState({isFooterVisible: true})
-  }
+    this.setState({ isFooterVisible: true });
+  };
 
   hideFooter = () => {
-    this.setState({isFooterVisible: false})
-  }
+    this.setState({ isFooterVisible: false });
+  };
   render() {
     return (
       <div>
-        <Menu
-          showFooter={this.showFooter}
-          hideFooter={this.hideFooter}>
-        </Menu>
-        {this.state.isFooterVisible && (<Footer></Footer>)}
+        <Menu showFooter={this.showFooter} hideFooter={this.hideFooter}></Menu>
+        {this.state.isFooterVisible && <Footer></Footer>}
       </div>
     );
   }

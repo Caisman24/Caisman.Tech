@@ -15,39 +15,34 @@ class Menu extends Component {
       isMobile: false,
       isMobileMenuVisible: false,
     };
-
-    this.updatePredicate = () => {
-      this.setState({ isMobile: window.innerWidth < 768 });
-    };
   }
 
-  componentDidMount() {
-    this.updatePredicate();
-    window.addEventListener('resize', this.updatePredicate);
-  }
-
-  componentWillMount() {
-    window.removeEventListener('resize', this.updatePredicate);
-  }
+  updatePredicate = () => {
+    this.setState({ isMobile: window.innerWidth < 768 });
+  };
 
   openMenu = () => {
-    this.setState({isMobileMenuVisible: true})
+    this.setState({ isMobileMenuVisible: true });
     this.props.hideFooter();
   };
 
   closeMenu = () => {
-    this.setState({isMobileMenuVisible: false})
+    this.setState({ isMobileMenuVisible: false });
     this.props.showFooter();
-  }
+  };
 
   render() {
     const isMobile = this.state.isMobile;
-    if(this.state.isMobileMenuVisible)
-    {
+    window.addEventListener('resize', this.updatePredicate);
+    if (this.state.isMobileMenuVisible) {
       return (
-        <MobileNav closeMenu={this.closeMenu}></MobileNav>
-      )
+        <MobileNav
+          closeMenu={this.closeMenu}
+          isMobile={this.state.isMobile}
+        ></MobileNav>
+      );
     }
+
     return (
       <div className="header-menu">
         <Router>
