@@ -1,0 +1,51 @@
+.ReactModal__Content.ReactModal__Content--after-open{
+    padding:0!important;
+    border: none!important;
+    border-radius: 0!important;
+    width: 60%!important;
+}
+
+.page-modal{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.header-modal{
+    background-color: #1a1a1a;
+    width:100%;
+    padding:10px
+}
+
+.header-modal i{
+    float: right;
+}
+
+.header-modal h1{
+    padding-left: 3px;
+    color: white;
+    font-size: 15px;
+}
+
+.text-container{
+    width:100%;
+    padding: 10px 20px;
+    overflow-y: scroll;
+    height: 80%;
+}
+
+.accept-button{
+    margin-top: 10px;
+    width:100%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+}
+
+.accept-button button{
+    background-color: #151616;
+    color:white;
+    border: none;
+    font-size: 12px;
+    float:right;
+}

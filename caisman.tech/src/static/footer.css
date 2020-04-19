@@ -56,21 +56,20 @@ a i{
   text-align: center; 
 }
 
-.footer-block-text a, .footer-block-text a:hover, .footer-block-text a:active{
+.footer-block-text p {
+  color: #7a7d7f;
+}
+
+.footer-block-text button, .footer-block-text button:hover, .footer-block-text button:active{
   margin-right: 8px;
   color: #e1a87a;
+  border: none;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   background-color: transparent;
   text-decoration: none;
-}
-
-.footer-block-text a:last-child{
-  margin-right: none;
-}
-
-.footer-block-text p {
-  color: #7a7d7f;
+  cursor: pointer;
+  padding: 0!important;
 }
 
 .footer-title{
