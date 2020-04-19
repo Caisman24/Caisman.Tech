@@ -8,9 +8,29 @@ import {
   faGithub,
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import TermsOfService from './TermsOfService';
 
 class Footer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showModal: false,
+    };
+  }
+
+  openModal = () => {
+    this.setState({ showModal: true });
+  };
+
+  closeModal = () => {
+    this.setState({ showModal: false });
+  };
+
   render() {
+    if (this.state.showModal) {
+      return <TermsOfService closeModal={this.closeModal}></TermsOfService>;
+    }
+
     return (
       <div className="footer">
         <div className="container">
@@ -28,9 +48,9 @@ class Footer extends Component {
                     Reserved
                   </p>
                   <p>
-                    <a href="">Terms of Service</a>
-                    <a href="">Return Policy</a>
-                    <a href="">Privacy Policy</a>
+                    <button onClick={this.openModal}>Terms of Service</button>
+                    <button onClick={this.openModal}>Return Policy</button>
+                    <button onClick={this.openModal}>Privacy Policy</button>
                   </p>
                 </div>
                 <div className="social-icon">
