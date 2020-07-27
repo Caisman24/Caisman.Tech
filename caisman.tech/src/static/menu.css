@@ -80,6 +80,9 @@
 }
 
 .mobile-page{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
     overflow: hidden;
     height:100vh;
     background-color: #151616;

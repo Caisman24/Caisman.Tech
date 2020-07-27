@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Menu from '../Menu/Menu';
 import Footer from '../Footer/Footer';
+import SocialPanel from './SocialPanel';
 
 class Contact extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class Contact extends Component {
     return (
       <div className="content-on-page">
         <Menu ref={this.menuRef}></Menu>
-        <div>Contact page</div>
+        <SocialPanel></SocialPanel>
         <Footer></Footer>
       </div>
     );

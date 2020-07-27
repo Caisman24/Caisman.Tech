@@ -12,6 +12,10 @@ class Menu extends Component {
     };
   }
 
+  displayFooter = (showFooter) => {
+    this.props.displayFooter(showFooter);
+  };
+
   updatePredicate = () => {
     this.setState({ isMobile: window.innerWidth < 768 });
   };
@@ -24,20 +28,11 @@ class Menu extends Component {
     this.setState({ isMobileMenuVisible: false });
   };
 
-  isFooterVisible = () => {
-    return !this.state.isMobileMenuVisible;
-  };
-
   render() {
     const isMobile = this.state.isMobile;
     window.addEventListener('resize', this.updatePredicate);
     if (this.state.isMobileMenuVisible) {
-      return (
-        <MobileNav
-          closeMenu={this.closeMenu}
-          isMobile={this.state.isMobile}
-        ></MobileNav>
-      );
+      return <MobileNav closeMenu={this.closeMenu}></MobileNav>;
     }
 
     return (

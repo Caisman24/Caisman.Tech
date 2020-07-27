@@ -10,13 +10,11 @@ class Resume extends Component {
 
   render() {
     return (
-      <div className="content-on-page">
+      <React.Fragment>
         <Menu ref={this.menuRef}></Menu>
         <div>On resume page</div>
-        {!(this.menuRef.current && this.menuRef.current.isFooterVisible()) && (
-          <Footer></Footer>
-        )}
-      </div>
+        <Footer></Footer>
+      </React.Fragment>
     );
   }
 }

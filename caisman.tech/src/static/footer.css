@@ -1,13 +1,9 @@
 .footer {
   position: fixed;
   background-color: #1a1a1a;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 30%;
+  overflow: hidden;
 }
 
 .social-icon {

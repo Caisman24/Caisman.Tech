@@ -1,0 +1,43 @@
+.social-panel{
+    max-height:100%;
+    padding:20vh 6vw;
+    overflow: hidden;
+}
+
+.images-social-media{
+    display: flex;
+    justify-content: center;
+}
+
+.images-social-media a{
+    height:13vw;
+    width: 13vw;
+    cursor: pointer;
+    position: relative;
+    padding: 20px;
+    margin: 0 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.images-social-media i{
+    color: white;
+    font-size: 2.5vmax;
+}
+
+.linkedin{
+    background-color: #006599!important;
+}
+
+.github{
+    background-color:#211F1F!important;
+}
+
+.instagram{
+    background-color: #DD2A7B!important;
+}
+
+.facebook{
+    background-color:#3b5a9b!important;
+}

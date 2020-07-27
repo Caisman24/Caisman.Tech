@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Menu from '../Menu/Menu';
 import Footer from '../Footer/Footer';
 
@@ -10,11 +10,11 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="content-on-page">
-        <Menu ref={this.menuRef}></Menu>
+      <Fragment>
+        <Menu></Menu>
         <div>Home page</div>
         <Footer></Footer>
-      </div>
+      </Fragment>
     );
   }
 }

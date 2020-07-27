@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Menu from '../Menu/Menu';
 import Footer from '../Footer/Footer';
 
@@ -10,13 +10,11 @@ class Subscribe extends Component {
 
   render() {
     return (
-      <div className="content-on-page">
+      <Fragment>
         <Menu ref={this.menuRef}></Menu>
         <div>On subscribe page</div>
-        {!(this.menuRef.current && this.menuRef.current.isFooterVisible()) && (
-          <Footer></Footer>
-        )}
-      </div>
+        <Footer></Footer>
+      </Fragment>
     );
   }
 }
